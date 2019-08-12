@@ -1,5 +1,5 @@
 const express = require("express");
-
+const mysql = require("mysql2")
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
