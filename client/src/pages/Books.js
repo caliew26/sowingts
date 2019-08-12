@@ -100,7 +100,7 @@ class Produce extends Component {
             <Carousel>
               <h1>Produce On My List</h1>
             </Carousel>
-            {this.state.produce.length ? (
+            {/* {this.state.produce.length ? (
               <List>
                 {this.state.farmStand_db.map(book => (
                   <ListItem key={farmStand_db._id}>
@@ -112,7 +112,7 @@ class Produce extends Component {
                     <DeleteBtn onClick={() => this.deleteProduce(farmStand_db._id)} />
                   </ListItem>
                 ))}
-              </List>
+              </List> */}
             ) : (
               <h3>No Results to Display</h3>
             )}

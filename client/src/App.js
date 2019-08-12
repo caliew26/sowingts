@@ -7,6 +7,7 @@ import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 
 
+
 function App() {
   return (
     <Router>
@@ -17,6 +18,7 @@ function App() {
         </div>
         <Switch>
           <Route exact path="/" component={Books} />
+          {/* component points to the pages under src  */}
           <Route exact path="/books" component={Books} />
           <Route exact path="/books/:id" component={Detail} />
           <Route component={NoMatch} />
