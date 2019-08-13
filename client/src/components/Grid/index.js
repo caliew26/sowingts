@@ -1,3 +1,7 @@
+
+//this is the template that was given... I want the carousel, not the grid
+//how do I get the carousel broken out like this???
+
 import React from "react";
 // import Carousel from "react-bootstrap/Carousel";
 

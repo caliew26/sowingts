@@ -1,3 +1,5 @@
+
+//Cali - you need to do something to this page none of this matches - this is part of the template that was given.
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Carousel from "./components/Carousel";

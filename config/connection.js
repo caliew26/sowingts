@@ -1,7 +1,7 @@
 //this is the db connection
 const Sequelize = require('sequelize');
 
-const sequelize = new sequelize({
+const sequelize = new Sequelize({
   port: 3306,
   host: "localhost",
   user: "root",
@@ -9,14 +9,5 @@ const sequelize = new sequelize({
   database: "farmstand_db"
 });
 
-// Connect to the database
-// connection.connect(function(err) {
-//   if (err) {
-//     console.error("error connecting: " + err.stack);
-//     return;
-//   }
-//   console.log("connected as id " + connection.threadId);
-// });
 
-// Export connection
 module.exports = sequelize;

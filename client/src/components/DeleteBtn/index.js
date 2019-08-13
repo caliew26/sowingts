@@ -1,3 +1,5 @@
+//Cali - do you need this function?
+
 import React from "react";
 import "./style.css";
 
