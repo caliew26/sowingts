@@ -6,6 +6,9 @@ function Nav() {
       <a className="navbar-brand" href="/">
         Sowing The Seed
       </a>
+      <a href="/">Welcome |</a>
+      <a href="../about">About Us |</a><br></br>
+      <a href="../Books"> Details</a>
     </nav>
   );
 }

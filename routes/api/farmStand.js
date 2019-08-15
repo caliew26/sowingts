@@ -1,39 +1,32 @@
-const router = require("express").Router();
-const connection = require("../../config/connection.js");
+//api talks to mysql database
 
-module.exports = function(app){
-  app.get("/api/all", function(req, res){
-    let dbQuery = "SELECT * FROM farmstand_db";
+const Router = require("express").Router();
+const db = require("../../models/farmStandModel");
 
-    connection.query(dbQuery, function(err, result){
-      if (err) throw err;
-      res.json(result);
-    });
-  });
 
-  app.post("/api/new", function(req, res){
-    console.log("Produce: ");
-    console.log(req.body);
+//"/products" is the table name
+//this is a select all from the mysql database
+Router.get("/api/products", (req,res) => {
+  db.products.findAll({})
+    .then (products => {
+      // console.log(products)
+      res.json(products)
+    })
+    .catch(err => {
+      console.log(err)
+    })
 
-    let dbQuery = "INSERT INTO farmstand_db (product_name, department, price, stock_ quantity) VALUES (?, ?, ?, ?)";
+})
 
-    connection.query(dbQuery, [req.body.product_name, req.body.department, req.body.price, req.body.stock_quantity], function(err, result){
-      if(err) throw err;
-      console.log("Product successfully saved!");
-      res.end();
-    });
-  });
-};
-// // Matches with "/api/farmStand.js"
-// router.route("/")
-//   .get(farmStandController.findAll)
-//   .post(farmStandController.create);
+Router.post("/products", (req, res) => {
+  db.products.findAll({})
+  .then(products => {
+    // console.log(products)
+    res.json(products)
+  })
+  .catch(err => {
+    console.log(err)
+  })
+})
 
-// // Matches with "/api/farmStand/:id"
-// router
-//   .route("/:id")
-//   .get(farmStandController.findById)
-//   .put(farmStandController.update)
-//   .delete(farmStandController.remove);
-// }
-// module.exports = router;
+module.exports = Router;

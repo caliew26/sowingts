@@ -1,15 +1,13 @@
 //been trying to get this page to work -no idea what is suppose to be here
 
 import React, { Component } from "react";
-import DeleteBtn from "../components/DeleteBtn";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import Carousel from "../components/Carousel";
 
-class products extends Component {
+class Products extends Component {
   state = {
     products: [],
     product_name: "",
@@ -119,8 +117,6 @@ class products extends Component {
 //                         } in {products.department}
 //                       </strong>
 //                     </Link>
-//                     <DeleteBtn onClick={() => this.deleteProducts
-//                       (products._id)} />
 //                   </ListItem>
 //                 ))}
 //               </List>
@@ -134,4 +130,4 @@ class products extends Component {
 //   }
 // }
 
-export default products;
+export default Products;

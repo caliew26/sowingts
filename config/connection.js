@@ -4,9 +4,10 @@ const Sequelize = require('sequelize');
 const sequelize = new Sequelize({
   port: 3306,
   host: "localhost",
-  user: "root",
+  username: "root",
   password: "Potter!!13",
-  database: "farmstand_db"
+  database: "farmstand_db",
+  dialect: "mysql"
 });
 
 

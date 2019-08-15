@@ -1,13 +1,13 @@
-
-//Cali - you need to do something to this page none of this matches - this is part of the template that was given.
+//this is what controls what the user sees
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Carousel from "./components/Carousel";
+import CarouselBootstrap from "./components/Carousel";
 import Books from "./pages/Books";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
-
+import About from "./pages/About";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -16,15 +16,18 @@ function App() {
       <div>
         <Nav />
         <div>
-        <Carousel />
+          <br></br>
+        <CarouselBootstrap />
+          <br></br>
         </div>
         <Switch>
           <Route exact path="/" component={Books} />
           {/* component points to the pages under src  */}
-          <Route exact path="/books" component={Books} />
+          <Route exact path="/about" component={About} />
           <Route exact path="/books/:id" component={Detail} />
           <Route component={NoMatch} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
