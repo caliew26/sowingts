@@ -1,7 +1,7 @@
 //api talks to mysql database
 
 const router = require("express").Router();
-const db = require("../../models/farmStandModel.js");
+const db = require("../../models");
 
 
 //"/products" is the table name

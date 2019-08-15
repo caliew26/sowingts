@@ -1,6 +1,6 @@
 //controller feeds to the model
 
-const db = require("../models/farmStandModel");
+const db = require("../models");
 
 // Defining methods for the farmStandController
 module.exports = {

@@ -3,7 +3,7 @@ const mysql = require("mysql2")
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
-const db = require("./models/farmStandModel");
+const db = require("./models");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));

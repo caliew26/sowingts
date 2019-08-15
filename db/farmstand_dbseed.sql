@@ -14,83 +14,88 @@ CREATE TABLE products (
     stock_quantity INTEGER (4)
 );
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("carrots", "veggie", 5.00, 0);
+INSERT INTO products
+VALUES
+(1, product_name, department, price, stock_quantity, createdAt, updatedAt),
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("lettuce", "veggie", 5.00, 0);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("zucchini", "veggie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("carrots", "veggie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("snap peas", "veggie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("lettuce", "veggie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("snow peas", "veggie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("zucchini", "veggie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("kale", "veggie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("snap peas", "veggie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("spinach", "veggie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("snow peas", "veggie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("green beans", "veggie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("kale", "veggie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("beets", "veggie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("spinach", "veggie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("swiss chard", "veggie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("green beans", "veggie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("cucumbers", "veggie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("beets", "veggie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("sweet peppers", "veggie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("swiss chard", "veggie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("sweet onions", "veggie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("cucumbers", "veggie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("cherry tomatoes", "veggie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("sweet peppers", "veggie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("slicer tomatoes", "veggie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("sweet onions", "veggie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("rhizome purbple", "flower", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("cherry tomatoes", "veggie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("bouquets", "flower", 00.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("slicer tomatoes", "veggie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("rhubarb", "pie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("rhizome purbple", "flower", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("strawberry-rhubarb", "pie", 00.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("bouquets", "flower", 00.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("raspberry-rhubarb", "pie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("rhubarb", "pie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("apple", "pie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("strawberry-rhubarb", "pie", 00.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("blackberry", "pie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("raspberry-rhubarb", "pie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("blueberry", "pie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("apple", "pie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("cherry", "pie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("blackberry", "pie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("peach", "pie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("blueberry", "pie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("raspberry", "pie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("cherry", "pie", 5.00, 0, current_timestamp, current_timestamp);
 
-INSERT INTO products (product_name, department, price, stock_quantity)
-VALUES ("yumble-berry", "pie", 5.00, 0);
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("peach", "pie", 5.00, 0, current_timestamp, current_timestamp);
+
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("raspberry", "pie", 5.00, 0, current_timestamp, current_timestamp);
+
+INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)
+VALUES ("yumble-berry", "pie", 5.00, 0, current_timestamp, current_timestamp);
