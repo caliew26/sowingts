@@ -1,12 +1,12 @@
 //api talks to mysql database
 
-const Router = require("express").Router();
-const db = require("../../models/farmStandModel");
+const router = require("express").Router();
+const db = require("../../models/farmStandModel.js");
 
 
 //"/products" is the table name
 //this is a select all from the mysql database
-Router.get("/api/products", (req,res) => {
+router.get("/products", (req,res) => {
   db.products.findAll({})
     .then (products => {
       // console.log(products)
@@ -18,7 +18,7 @@ Router.get("/api/products", (req,res) => {
 
 })
 
-Router.post("/products", (req, res) => {
+router.post("/products", (req, res) => {
   db.products.findAll({})
   .then(products => {
     // console.log(products)
@@ -29,4 +29,4 @@ Router.post("/products", (req, res) => {
   })
 })
 
-module.exports = Router;
+module.exports = router;
