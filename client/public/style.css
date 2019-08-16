@@ -1,6 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.navbar-brand {
+    font-size: 48px;
+    color: black;
+}
+
+.navbar {
+    background-color: gold;
+    
+}
+
+#container {
+    min-height: 100%;
+}
+
+.picture {
+    max-width: 100%;
+    max-height: 50%;
+}
+
+.pictureabout {
+    max-width: 100%;
+    max-height: 50%;
+    float: right;
+}
+
 .footer {
+    position: relative;
     text-align: center;
     font-size: 15px;
-    margin: 2px;
-    border: 2px solid gray;
+    bottom: -100%;
+    /* border: 2px solid gray; */
+    height: 100px;
+    background-color:  gold;
+    clear: both;
 }
+

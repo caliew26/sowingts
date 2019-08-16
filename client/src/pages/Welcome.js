@@ -5,7 +5,7 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
-import Carousel from "../components/Carousel";
+import CarouselBootstrap from "../components/Carousel";
 
 class Products extends Component {
   constructor(props) {
@@ -26,7 +26,7 @@ class Products extends Component {
   loadProducts = () => {
     API.getProducts()
       .then(res =>
-        this.setState({ product_name: res.data, department: "", price: "", stock_quantity: "" })
+        this.setState({ products_name: res.data, department: "", price: "", stock_quantity: "" })
       )
       .catch(err => console.log(err));
   };
@@ -59,7 +59,7 @@ class Products extends Component {
 
   render() {
     return(
-      <Carousel />
+      <CarouselBootstrap />
     )
   }
 }
