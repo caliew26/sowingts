@@ -1,8 +1,8 @@
-if (exists(myconfigfile) === true) {
-    mypassword = require('myconfig');
-  } else {
-    mypassword = null
-  };
+// if (exists('myconfigfile') === true) {
+//     mypassword = require('myconfigfile');
+//   } else {
+//     mypassword = null
+//   };
 
 
 module.exports = {
@@ -10,7 +10,7 @@ module.exports = {
     "port": 3306,
     "host": "localhost",
     "username": "root",
-    "password": mypassword,
+    "password": "Potter!!13",
     "database": "farmstand_db",
     "dialect": "mysql"
   },
