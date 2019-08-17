@@ -13,8 +13,7 @@ function CarouselBootstrap (){
              alt="Marlis Sowing The Seed"
              />
              <Carousel.Caption>
-             <h3>Welcome to Sowing The Seed</h3>
-             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+             <h3>Farming from the Heart</h3>
              </Carousel.Caption>
          </Carousel.Item>
          <Carousel.Item>
@@ -26,7 +25,6 @@ function CarouselBootstrap (){
 
              <Carousel.Caption>
              <h3>All About Us</h3>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
              </Carousel.Caption>
          </Carousel.Item>
          <Carousel.Item>
@@ -37,8 +35,7 @@ function CarouselBootstrap (){
              />
 
              <Carousel.Caption>
-             <h3>Flowers, Veggies, Pies oh my!</h3>
-             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+             <h3>Veggies, Flowers & Pies oh my!</h3>
              </Carousel.Caption>
          </Carousel.Item>
          </Carousel>

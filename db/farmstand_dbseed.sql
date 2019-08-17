@@ -14,9 +14,9 @@ CREATE TABLE products (
     stock_quantity INTEGER (4)
 );
 
-INSERT INTO products
-VALUES
-(1, product_name, department, price, stock_quantity, createdAt, updatedAt),
+-- INSERT INTO products
+-- VALUES
+-- (1, product_name, department, price, stock_quantity, createdAt, updatedAt),
 
 
 INSERT INTO products (product_name, department, price, stock_quantity, createdAt, updatedAt)

@@ -13,8 +13,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 // Add route - this is where the code will go to find what it needs to do
-const farmstandRoute = require("./routes/api/farmStand")
-app.use("/api", farmstandRoute);
+app.use(routes);
+
+
 
 // Start the API server
 db.sequelize.sync().then(function(){
