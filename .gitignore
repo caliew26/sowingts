@@ -2,4 +2,5 @@ node_modules
 
 .DS_store
 
-#ignore folder named 'myconfig'
+# Ignore folder named 'myconfig'
+myconfig/
