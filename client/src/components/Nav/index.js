@@ -9,7 +9,7 @@ function Nav() {
       <span>
       <a href="/">Welcome |</a>
       <a href="../about">About Us |</a>
-      <a href="../Books"> Details</a>
+      <a href="../detail"> Details</a>
       </span>
     </nav>
   );

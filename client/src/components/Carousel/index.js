@@ -1,51 +1,47 @@
 import React from "react";
+//  import ReactBootstrapCarousel from "react-bootstrap-carousel";
+import Carousel from 'react-bootstrap/lib/Carousel';
+
 
 function CarouselBootstrap (){
     return (
-        <div className="bd-example">
-            <div id="carouselCaptions" className="carousel slide" data-ride="carousel">
-                    <ol className="carousel-indicators">
-                    <li data-target="#carouselCaptions" data-slide-to="0" class="active">Pies Pies Pies</li>
-                    <li data-target="#carouselCaptions" data-slide-to="1">Veggies for all!</li>
-                    <li data-target="#carouselCaptions" data-slide-to="2">Flowers Alive</li>
-                    </ol>
+        <Carousel>
+         <Carousel.Item>
+             <img
+             className="d-block w-100"
+             src="/marlissowingtheseed.jpg"
+             alt="Marlis Sowing The Seed"
+             />
+             <Carousel.Caption>
+             <h3>Welcome to Sowing The Seed</h3>
+             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+             </Carousel.Caption>
+         </Carousel.Item>
+         <Carousel.Item>
+             <img
+             className="d-block w-100"
+             src="/marlisringbell.jpg"
+             alt="Marlis Ring Bell"
+             />
 
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img src="marlissowingtheseed.jpg" className="picture d-block w-100" alt="sowing the seed"></img>
-                        <div className="carousel-caption d-md-block">
-                            <h5>Pies Pies Pies</h5>
-                            <p>Stuff about pies</p>
-                        </div>
-                    </div>
-                </div>
+             <Carousel.Caption>
+             <h3>Second slide label</h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+             </Carousel.Caption>
+         </Carousel.Item>
+         <Carousel.Item>
+             <img
+             className="d-block w-100"
+             src="holder.js/800x400?text=Third slide&bg=20232a"
+             alt="Third slide"
+             />
 
-                <div className="carousel-item">
-                    <img src="marlisringbell.jpg" className="picture d-block w-100" alt="marlis ring bell"></img>
-                    <div className="carousel-caption d-md-block">
-                        <h5>Veggies for All!</h5>
-                        <p>Veggies are everywhere.</p>
-                    </div>
-                </div>
-
-                <div className="carousel-item">
-                    <img src="whitetippeddahlia.jpg" className="picture d-block w-100" alt="white tipped dahlia"></img>
-                    <div className="carousel-caption d-md-block">
-                        <h5>Flowers Alive</h5>
-                        <p>There are purty flowers for everyone.</p>
-                    </div>
-                </div>
-
-                <a className="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="sr-only">Previous</span>
-                </a>
-                <a className="carousel-control-next" href="#carouselCaptions" role="button" data-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
+             <Carousel.Caption>
+             <h3>Third slide label</h3>
+             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+             </Carousel.Caption>
+         </Carousel.Item>
+         </Carousel>
     );
 }
             
