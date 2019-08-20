@@ -10,6 +10,10 @@ export default {
   getProductsID: function(id) {
     return axios.get("/api/farmstand/products/" + id);
   },
+  //want to pull all items from the database
+  adminProducts: function(adminsData) {
+    return axios.post("/api/farmstand/products", adminsData);
+  },
   // Deletes the product with the given id
   deleteProducts: function(id) {
     return axios.delete("/api/farmstand/products/" + id);
@@ -17,5 +21,9 @@ export default {
   // Saves a product to the database
   saveProducts: function(productsData) {
     return axios.post("/api/farmstand/products", productsData);
+  }, 
+  
+  adminProducts: function(adminsData) {
+    return axios.post("/api/farmstand/products", adminsData);
   }
 };

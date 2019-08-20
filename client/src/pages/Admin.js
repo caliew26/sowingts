@@ -1,9 +1,7 @@
-//this is the page that will show all of the items for sale
-
 import React, { Component } from "react";
 import API from "../utils/API";
 
-class Detail extends Component {
+class Admin extends Component {
   state = {
     products: []
   };
@@ -40,4 +38,4 @@ class Detail extends Component {
 }
 
 
-export default Detail;
+export default Admin;

@@ -1,4 +1,6 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 
 function Footer() {
     return (
@@ -9,7 +11,7 @@ function Footer() {
             
                 <a href="https://github.com/caliew26">
                 <img src="githubicon.png" alt="github"></img></a>
-            
+                <a href="../admin">Admin</a>
                 {/* <a href="Cali Mitchell 2019.pdf">2019 Resume</a> */}
             <br></br>
             <span className="text-muted">Copyright Cali Mitchell &copy; 2019

@@ -7,6 +7,7 @@ import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import About from "./pages/About";
 import Footer from "./components/Footer";
+import Admin from "./pages/Admin";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           {/* component points to the pages under src  */}
           <Route exact path="/about" component={About} />
           <Route exact path="/detail" component={Detail} />
+          <Route exact path="/admin" component={Admin} />
           <Route component={NoMatch} />
         </Switch>
         <Footer />
