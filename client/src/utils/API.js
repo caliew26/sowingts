@@ -11,8 +11,8 @@ export default {
     return axios.get("/api/farmstand/products/" + id);
   },
   //want to pull all items from the database
-  adminProducts: function(adminsData) {
-    return axios.post("/api/farmstand/products", adminsData);
+  getAdminProducts: function() {
+    return axios.post("/api/farmstand/products");
   },
   // Deletes the product with the given id
   deleteProducts: function(id) {

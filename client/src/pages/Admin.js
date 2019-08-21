@@ -9,12 +9,44 @@ class Admin extends Component {
   render(){
     return (
       <div>
-        <h1>Here are items we could have for sale:</h1>
-        {this.state.products.map(product =>  (
+        <h1>Here are all of our items:</h1>
+            <div className="productsStuff">
+                <h3>Veggies</h3>
+                {this.state.products.filter(product => (
+                    product.department == 'veggie'
+                )).map(product => (
+                    <div>
+                        <input type="checkbox" className="myCheckbox"></input><p key={product.id}>{product.department} {product.product_name}</p>
+                    </div>
+                ))}
+            </div>            
+            <div className="productsStuff">
+                <h3>Flowers</h3>
+                {this.state.products.filter(product => (
+                    product.department == 'flower'
+                )).map(product => (
+                    <div>
+                        <input type="checkbox" className="myCheckbox"></input><p key={product.id}>{product.department} {product.product_name}</p>
+                    </div>
+                ))}
+            </div>
+            <div className="productsStuff">
+                <h3>Pies</h3>
+                {this.state.products.filter(product => (
+                    product.department == 'pie'
+                )).map(product => (
+                    <div>
+                        <input type="checkbox" className="myCheckbox"></input><p key={product.id}>{product.department} {product.product_name}</p>
+                    </div>
+                ))}
+            </div>
+            {/* below code will populate all from "findAll" */}
+        {/* {this.state.products.map(product =>  (
           <div>
-          <p key={product.id}>{product.department} {product.product_name}</p>
+            <input type="checkbox" className="myCheckbox"></input><p key={product.id}>{product.department} {product.product_name}</p>
           </div>
-        ))}
+        ))} */}
+
       </div>
     );
   }
@@ -30,11 +62,22 @@ class Admin extends Component {
     API.getProducts()
     //.then is the promise , but what is the "this.setState"??
       .then(res =>
-        this.setState({ products: res.data })
+        this.setState({ products: res.data})
         // console.log(res.data)
       )
       .catch(err => console.log(err));
   };
+
+//   loadProducts = () => {
+//     //API is the client side api under utils
+//     API.getAdminProducts()
+//     //.then is the promis
+//       .then(res =>
+//         this.setState({ products: res.data})
+//         // console.log(res.data)
+//       )
+//       .catch(err => console.log(err));
+//   };
 }
 
 

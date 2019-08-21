@@ -11,10 +11,18 @@ class Detail extends Component {
   render(){
     return (
       <div>
+        <div className="openHours">
+          <h3>We are Open:</h3>
+          <h3>Hours: 10-6</h3>
+          <h3>Date: Date Picker Under Contruction</h3>
+        </div>
+        <div className="googleApiConnection">
+          <img src="layneandmarlisbuilding.jpg" className="buildingPeas" alt="Layne and Marlis Building"></img>
+        </div>
         <h1>Here are items we could have for sale:</h1>
         {this.state.products.map(product =>  (
           <div>
-          <p key={product.id}>{product.department} {product.product_name}</p>
+          <p key={product.id}>{product.department} : {product.product_name}</p>
           </div>
         ))}
       </div>

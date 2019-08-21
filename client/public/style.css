@@ -44,3 +44,20 @@ html, body {
     clear: both;
 }
 
+.pictureabout {
+    float: left;
+}
+
+.buildingPeas {
+    width: 25%;
+    height: 25%;
+}
+
+.openHours {
+    border: 2px black solid;
+    margin-right: 700px;
+}
+
+.productsStuff {
+    border: 2px black solid;
+}
