@@ -55,32 +55,10 @@ const db = require("../../models");
 
     router.post("/admin/update/", (req,res) =>{
       db.products.update({available: req.body.available}, {where: {id: req.body.id}})
-      res.send("stringgingy")
+      res.send("something")
       console.log(req.body.available)
       console.log(req.body.id)
-  // router.post("/admin/update/", (req,res) =>{
-  //   db.products.findByPk(1).then(product => {
-  //     console.log('Issue', product)
-  //     // product.available = 1
-  //     product.updateAttributes({
-  //       available: 1
-  //     })
-  //     console.log("after update")
-  //   })
-    // db.products.find({ where: {id: 1} })
-    //   .on('success', function(product){
-    //     if(product){
-    //       console.log("yippee!")
-    //       console.log(JSON.stringify(product))
-    //     } 
-    //   })
-
-    // res.json("thanks" + JSON.stringify(req.body))
     })
-    // .then({
 
-    // }).catch(err => {
-    //   console.log(err)
-    // })
   
   module.exports = router;

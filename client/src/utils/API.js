@@ -29,5 +29,13 @@ export default {
 
   userLoginForm: function(user) {
     return axios.post("/api/farmstand/admin/user", user);
+  },
+
+  updateToggle: function(idofItem, newActiveState){
+    const data = {
+      "id": idofItem,
+      "available": newActiveState
+    }
+    return axios.post("/api/farmStand/admin/update", data)
   }
 };

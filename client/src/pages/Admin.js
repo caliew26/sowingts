@@ -6,31 +6,35 @@ class Admin extends Component {
     products: []
   };
   
-  availableItem (valueAvailfromDB){
-    console.log("This is avail" + valueAvailfromDB)
+  availableItem (valueAvailfromDB, idAvailfromDB){
+    console.log("This is avail" + valueAvailfromDB, "This is the product id " + idAvailfromDB)
     if(valueAvailfromDB == 1) {
-      console.log("checked")
-      return <input type="checkbox" className="myCheckbox" checked></input>
+      // console.log("checked")
+    return <button type="button" id={idAvailfromDB} value="0" onClick={(event) => this.checkboxClicked(event)}  >Deactivate</button>
     } 
-    return <input type="checkbox" className="myCheckbox" ></input>
+    return <button type="button" id={idAvailfromDB} value="1" onClick={(event) => this.checkboxClicked(event)}  >Activate</button>
+
   }
+
+  //need an event listener that will have an 'onChange' that will listen for when the checkbox is clicked and when it is clicked do an alert
+  checkboxClicked(event){
+    const btnEvent = event.target
+    alert("you've clicked something ")
+    console.log(btnEvent.id)
+    console.log(btnEvent.value)
+    console.log(event.currentTarget)
+    API.updateToggle(btnEvent.id, btnEvent.value)
+    if (btnEvent.value == 0){
+      btnEvent.value = 1
+      btnEvent.innerHTML = "Activate"
+    } else {
+      btnEvent.value = 0
+      btnEvent.innerHTML = "Deactivate"
+    }
+  }
+
   render(){
     console.log("rendering")
-
-    // function buildCategory (displayName, deptName){
-    //   return(
-    //     <div className="productsStuff">
-    //       <h3>{displayName}</h3>
-    //       {this.state.products.filter(product => (
-    //           product.department == deptName
-    //       )).map(product => (
-    //           <div>
-    //               <input type="checkbox" className="myCheckbox"></input><p key={product.id}> {product.product_name}</p>
-    //           </div>
-    //       ))}
-    //     </div> 
-    //   )
-    // }
 
     return (
       <div>
@@ -43,7 +47,7 @@ class Admin extends Component {
                     product.department == 'veggie'
                 )).map(product => (
                     <div>
-                      {this.availableItem(product.available)}
+                      {this.availableItem(product.available, product.id)}
                         {/* <input type="checkbox" className="myCheckbox" {...this.availableItem(1)}></input>*/}
                       <p key={product.id}> {product.product_name}</p> 
                     </div>
@@ -77,7 +81,7 @@ class Admin extends Component {
             <input type="checkbox" className="myCheckbox"></input><p key={product.id}>{product.department} {product.product_name}</p>
           </div>
         ))} */}
-
+        
       </div>
     );
   }
@@ -85,6 +89,7 @@ class Admin extends Component {
   //on page load, I want it to load all the things in the products table in the farmstand_db
   componentDidMount() {
     this.loadProducts();
+    // event.preventDefault();
   }
 
   //loadProducts is supposed to reach out to the API and get all the items from the products table
