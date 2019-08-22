@@ -5,18 +5,47 @@ class Admin extends Component {
   state = {
     products: []
   };
-
+  
+  availableItem (valueAvailfromDB){
+    console.log("This is avail" + valueAvailfromDB)
+    if(valueAvailfromDB == 1) {
+      console.log("checked")
+      return <input type="checkbox" className="myCheckbox" checked></input>
+    } 
+    return <input type="checkbox" className="myCheckbox" ></input>
+  }
   render(){
+    console.log("rendering")
+
+    // function buildCategory (displayName, deptName){
+    //   return(
+    //     <div className="productsStuff">
+    //       <h3>{displayName}</h3>
+    //       {this.state.products.filter(product => (
+    //           product.department == deptName
+    //       )).map(product => (
+    //           <div>
+    //               <input type="checkbox" className="myCheckbox"></input><p key={product.id}> {product.product_name}</p>
+    //           </div>
+    //       ))}
+    //     </div> 
+    //   )
+    // }
+
     return (
       <div>
         <h1>Here are all of our items:</h1>
+        {/* {buildCategory("Veggies","veggie")} */}
+        
             <div className="productsStuff">
                 <h3>Veggies</h3>
                 {this.state.products.filter(product => (
                     product.department == 'veggie'
                 )).map(product => (
                     <div>
-                        <input type="checkbox" className="myCheckbox"></input><p key={product.id}>{product.department} {product.product_name}</p>
+                      {this.availableItem(product.available)}
+                        {/* <input type="checkbox" className="myCheckbox" {...this.availableItem(1)}></input>*/}
+                      <p key={product.id}> {product.product_name}</p> 
                     </div>
                 ))}
             </div>            
@@ -26,7 +55,8 @@ class Admin extends Component {
                     product.department == 'flower'
                 )).map(product => (
                     <div>
-                        <input type="checkbox" className="myCheckbox"></input><p key={product.id}>{product.department} {product.product_name}</p>
+                      {this.availableItem(1)}
+                        <input type="checkbox" className="myCheckbox"></input><p key={product.id}> {product.product_name}</p>
                     </div>
                 ))}
             </div>
@@ -36,7 +66,8 @@ class Admin extends Component {
                     product.department == 'pie'
                 )).map(product => (
                     <div>
-                        <input type="checkbox" className="myCheckbox"></input><p key={product.id}>{product.department} {product.product_name}</p>
+                        <input type="checkbox" className="myCheckbox"></input>
+                        <p key={product.id}> {product.product_name}</p>
                     </div>
                 ))}
             </div>
@@ -67,17 +98,6 @@ class Admin extends Component {
       )
       .catch(err => console.log(err));
   };
-
-//   loadProducts = () => {
-//     //API is the client side api under utils
-//     API.getAdminProducts()
-//     //.then is the promis
-//       .then(res =>
-//         this.setState({ products: res.data})
-//         // console.log(res.data)
-//       )
-//       .catch(err => console.log(err));
-//   };
 }
 
 

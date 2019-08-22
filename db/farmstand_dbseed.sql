@@ -5,6 +5,7 @@ CREATE DATABASE farmstand_db;
 use farmstand_db;
 
 SELECT * FROM products;
+SELECT * FROM users;
 
 CREATE TABLE products (
     id INT NOT NULL AUTO_INCREMENT primary key,
@@ -14,6 +15,11 @@ CREATE TABLE products (
     stock_quantity INTEGER (4)
 );
 
+CREATE TABLE users (
+    id INT NOT NULL AUTO_INCREMENT primary key,
+    username VARCHAR(30) NOT NULL,
+    password VARCHAR(25) NOT NULL
+)
 -- INSERT INTO products
 -- VALUES
 -- (1, product_name, department, price, stock_quantity, createdAt, updatedAt),

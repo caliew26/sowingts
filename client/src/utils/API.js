@@ -25,5 +25,9 @@ export default {
   
   adminProducts: function(adminsData) {
     return axios.post("/api/farmstand/products", adminsData);
+  },
+
+  userLoginForm: function(user) {
+    return axios.post("/api/farmstand/admin/user", user);
   }
 };
