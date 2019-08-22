@@ -10,7 +10,7 @@ class UserForm extends Component {
   handleInputChange = event => {
     let value = event.target.value;
     const name = event.target.name;
-
+    console.log(name)
     if (name === "password") {
       value = value.substring(0, 15);
     }
@@ -23,15 +23,16 @@ class UserForm extends Component {
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-    // if (!this.state.userName) {
-    //   alert("Fill out your username please!");
-    // } else if (this.state.password.length < 6) {
-    //   alert(
-    //     `Choose a more secure password ${this.state.userName}`
-    //   );
-    // } else {
-    //   alert(`Hello ${this.state.userName}`);
-    // }
+    console.log(this.state.userName)
+    if (!this.state.userName) {
+      alert("Fill out your username please!");
+    } else if (this.state.password.length < 6) {
+      alert(
+        `Choose a more secure password ${this.state.userName}`
+      );
+    } else {
+      alert(`Hello ${this.state.userName}`);
+    }
 
     this.setState({
       userName: "",

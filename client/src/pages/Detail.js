@@ -10,7 +10,17 @@ class Detail extends Component {
 
   render(){
     return (
-      <div>
+      <div className="container">
+        <div className="activeDetails">
+          <h1>Here are items available today:</h1>
+          {this.state.products.map(product =>  (
+          <div className="detailProdImg">
+            <p key={product.id}>{product.department} : {product.product_name} </p>
+            {/* <span>{product.available}</span> */}
+            <img src={"./images/" + product.imagefilename} width="100%" alt="farming images"></img>
+          </div>
+        ))}
+        </div>
         <div className="openHours">
           <h3>We are Open:</h3>
           <h3>Hours: 10-6</h3>
@@ -19,20 +29,10 @@ class Detail extends Component {
         </div>
         <div id="map">
           <h2>We are here</h2>
-          {/* <img src="layneandmarlisbuilding.jpg" className="buildingPeas" alt="Layne and Marlis Building"></img> */}
-          <img src="https://maps.googleapis.com/maps/api/staticmap?center=Berkeley,CA&zoom=14&size=400x400&key=" alt="google map"></img>
-          {/* <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
-          &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
-          &markers=color:red%7Clabel:C%7C40.718217,-73.998284
-          &key=" alt="google map"></img> */}
+
+          <img src="https://maps.googleapis.com/maps/api/staticmap?markers=47.1377147,-122.1020025&zoom=14&key=AIzaSyBDyPaAKUz0YX65pN1bEmsXLxGYI4jIN8s&size=1800x400&scale=1" alt="google map"></img>
         </div>
-        <h1>Here are items we could have for sale:</h1>
-        {this.state.products.map(product =>  (
-          <div>
-          <p key={product.id}>{product.department} : {product.product_name} </p>
-          <span>{product.available}</span>
-          </div>
-        ))}
+
       </div>
     );
   }
@@ -45,7 +45,7 @@ class Detail extends Component {
   //loadProducts is supposed to reach out to the API and get all the items from the products table
   loadProducts = () => {
     //API is the client side api under utils
-    API.getProducts()
+    API.getActiveProducts()
     //.then is the promise , but what is the "this.setState"??
       .then(res =>
         this.setState({ products: res.data })

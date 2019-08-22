@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Footer from "./components/Footer";
 import Admin from "./pages/Admin";
 import UserForm from "./components/UserForm";
+import Login from "./components/Login";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/detail" component={Detail} />
           <Route exact path="/admin/user" component={UserForm} />
+          <Route exact path="/admin/login" component={Login} />
           <Route exact path="/admin" component={Admin} />
           <Route component={NoMatch} />
         </Switch>

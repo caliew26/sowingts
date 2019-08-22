@@ -54,18 +54,35 @@ html, body {
 }
 
 .openHours {
-    border: 2px black solid;
+    /* border: 2px black solid; */
+    float: none;
+    width: 100%;
 }
 
 .productsStuff {
-    border: 2px black solid;
+    /* border: 2px black solid; */
     column-count: 3;
     /* column-gap: 10px; */
 }
 
 #map {
-    width: 500px;
-    height: 400px;
-    border: 2px red solid;
-    scale: 2;
+    /* width: 500px;
+    height: 400px; */
+    /* border: 2px red solid; */
+    /* scale: 2; */
+}
+
+.detailProdImg {
+    float: left;
+    width: 30%;
+    margin-left: 1%;
+}
+
+.activeDetails {
+    float: right;
+}
+
+.detailProdImg>p {
+    text-align: center;
+    font-size: 20px;
 }

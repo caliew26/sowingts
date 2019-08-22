@@ -10,6 +10,9 @@ export default {
   getProductsID: function(id) {
     return axios.get("/api/farmstand/products/" + id);
   },
+  getActiveProducts: function(){
+    return axios.get("/api/farmstand/products/active")
+  },
   //want to pull all items from the database
   getAdminProducts: function() {
     return axios.post("/api/farmstand/products");

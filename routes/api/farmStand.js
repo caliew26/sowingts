@@ -28,10 +28,10 @@ const db = require("../../models");
 
   //"/products" is the table name
   //this is a select all from the mysql database
-  router.get("/products/:department", (req,res) => {
+  router.get("/products/active", (req,res) => {
     db.products.findAll({
       where: {
-        department: req.params.department
+        available: 1
       }
     })
       .then (products => {

@@ -5,7 +5,8 @@ module.exports = function(sequelize, DataTypes) {
     department: DataTypes.STRING,
     price: DataTypes.DECIMAL,
     stock_quantity: DataTypes.INTEGER,
-    available: DataTypes.TINYINT
+    available: DataTypes.TINYINT,
+    imagefilename: DataTypes.STRING
   });
 
   return products;
