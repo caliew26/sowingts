@@ -2,6 +2,7 @@
 
 import React, { Component } from "react";
 import API from "../utils/API";
+import datepicker from 'js-datepicker';
 
 class Detail extends Component {
   state = {
@@ -10,9 +11,9 @@ class Detail extends Component {
 
   render(){
     return (
-      <div className="container">
+      <div className="container  aboutUS">
         <div className="activeDetails">
-          <h1>Here are items available today:</h1>
+          <h1>Items available today:</h1>
           {this.state.products.map(product =>  (
           <div className="detailProdImg">
             <p key={product.id}>{product.department} : {product.product_name} </p>
@@ -23,13 +24,12 @@ class Detail extends Component {
         </div>
         <div className="openHours">
           <h3>We are Open:</h3>
+          <h3>Days: Wed & Thurs</h3>
           <h3>Hours: 10-6</h3>
-          <h3>Date: Date Picker Under Contruction</h3>
-          <h5>hours and dates vary from day to day</h5>
+          {/* <h3 className="myClass"><input type="date">Date: </input></h3> */}
+          <h5>*hours and dates may vary from day to day</h5>
         </div>
         <div id="map">
-          <h2>We are here</h2>
-
           <img src="https://maps.googleapis.com/maps/api/staticmap?markers=47.1377147,-122.1020025&zoom=14&key=AIzaSyBDyPaAKUz0YX65pN1bEmsXLxGYI4jIN8s&size=1800x400&scale=1" alt="google map"></img>
         </div>
 

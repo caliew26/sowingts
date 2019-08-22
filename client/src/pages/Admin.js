@@ -19,7 +19,7 @@ class Admin extends Component {
   //need an event listener that will have an 'onChange' that will listen for when the checkbox is clicked and when it is clicked do an alert
   checkboxClicked(event){
     const btnEvent = event.target
-    alert("you've clicked something ")
+    // alert("you've clicked something ")
     console.log(btnEvent.id)
     console.log(btnEvent.value)
     console.log(event.currentTarget)
@@ -41,47 +41,41 @@ class Admin extends Component {
         <h1>Here are all of our items:</h1>
         {/* {buildCategory("Veggies","veggie")} */}
         
-            <div className="productsStuff">
+            <div className="allProducts">
                 <h3>Veggies</h3>
                 {this.state.products.filter(product => (
                     product.department == 'veggie'
                 )).map(product => (
                     <div>
                       {this.availableItem(product.available, product.id)}
-                        {/* <input type="checkbox" className="myCheckbox" {...this.availableItem(1)}></input>*/}
                       <p key={product.id}> {product.product_name}</p> 
                     </div>
                 ))}
             </div>            
-            <div className="productsStuff">
-                <h3>Flowers</h3>
-                {this.state.products.filter(product => (
-                    product.department == 'flower'
-                )).map(product => (
-                    <div>
-                      {this.availableItem(1)}
-                        <input type="checkbox" className="myCheckbox"></input><p key={product.id}> {product.product_name}</p>
-                    </div>
-                ))}
-            </div>
-            <div className="productsStuff">
+
+            <div className="allProducts">
                 <h3>Pies</h3>
                 {this.state.products.filter(product => (
                     product.department == 'pie'
                 )).map(product => (
                     <div>
-                        <input type="checkbox" className="myCheckbox"></input>
-                        <p key={product.id}> {product.product_name}</p>
+                      {this.availableItem(product.available, product.id)}
+                      <p key={product.id}> {product.product_name}</p> 
                     </div>
                 ))}
             </div>
-            {/* below code will populate all from "findAll" */}
-        {/* {this.state.products.map(product =>  (
-          <div>
-            <input type="checkbox" className="myCheckbox"></input><p key={product.id}>{product.department} {product.product_name}</p>
-          </div>
-        ))} */}
-        
+
+            <div className="allProducts">
+                <h3>Flowers</h3>
+                {this.state.products.filter(product => (
+                    product.department == 'flower'
+                )).map(product => (
+                    <div>
+                      {this.availableItem(product.available, product.id)}
+                      <p key={product.id}> {product.product_name}</p> 
+                    </div>
+                ))}
+            </div>
       </div>
     );
   }

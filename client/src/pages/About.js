@@ -3,7 +3,7 @@ import React from "react";
 
 function About(){
     return (
-        <div className="media">
+        <div className="media  aboutUS">
             <div className="media-body">
                 <h1 className="mt-0 mb-1">Farming from the Heart</h1>
                 <h4>My name is Marlis Ross and I have a passion for farming.  I love to grow veggies and share them with everyone.  I have lived in South Prairie for 40+ years and love it here.  I want to share yummy veggies (which have not been treated with any pestisides) with everybody.  I will also have rhizomes available for all different colors of Iris's.  With the help of my maintenance crew (My husband Layne Ross) we will have home made pies made from the ingredients harvested from my farm. </h4> 

@@ -86,3 +86,13 @@ html, body {
     text-align: center;
     font-size: 20px;
 }
+
+.allProducts {
+    float: left;
+    width: 30%;
+    margin-left: 1%;
+}
+
+.aboutUS {
+    color: brown;
+}
