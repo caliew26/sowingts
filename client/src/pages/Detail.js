@@ -2,18 +2,27 @@
 
 import React, { Component } from "react";
 import API from "../utils/API";
-import datepicker from 'js-datepicker';
 
 class Detail extends Component {
   state = {
     products: []
   };
 
+  getHeader(){
+    if (this.state.products.length == 0){
+      return <h1>Sorry, we are closed, come back tomorrow</h1>
+    } else {
+      return <h1>Items available today: </h1>
+    }
+  }
+
   render(){
+    // console.log(JSON.Stringify(process.env))
     return (
       <div className="container  aboutUS">
         <div className="activeDetails">
-          <h1>Items available today:</h1>
+          {this.getHeader()}
+
           {this.state.products.map(product =>  (
           <div className="detailProdImg">
             <p key={product.id}>{product.department} : {product.product_name} </p>

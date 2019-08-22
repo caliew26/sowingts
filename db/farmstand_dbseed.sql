@@ -12,7 +12,11 @@ CREATE TABLE products (
     product_name VARCHAR(30) NOT NULL,
     department VARCHAR(30) NOT NULL,
     price DECIMAL(10,2) NULL default 0,
-    stock_quantity INTEGER (4)
+    stock_quantity INTEGER (4),
+    createdAt current_timestamp,
+    updatedAt current_timestamp,
+    available TINYINT NOT NULL,
+    imagefilename VARCHAR(100) NOT NULL "default marlissowingtheseed.jpg"
 );
 
 CREATE TABLE users (

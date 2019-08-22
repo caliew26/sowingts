@@ -7,6 +7,7 @@ const db = require("../../models");
 //"/products" is the table name
 //this is a select all from the mysql database
   router.get("/products", (req,res) => {
+    console.log(process.env.GOOGLE_KEY + "HELLLLOOOOOO") 
     db.products.findAll({})
       .then (products => {
         // console.log(products)

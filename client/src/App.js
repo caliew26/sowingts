@@ -13,6 +13,7 @@ import Login from "./components/Login";
 
 
 function App() {
+  console.log(process.env.GOOGLE_KEY + "HELLLLOOOOOO") 
   return (
     <Router>
       <div>
