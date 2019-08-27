@@ -33,7 +33,7 @@ class Detail extends Component {
         </div>
         <div className="openHours">
           <h3>We are Open:</h3>
-          <h3>Days: Wed & Thurs</h3>
+          <h3>Days: Thursday & Friday</h3>
           <h3>Hours: 10-6</h3>
           {/* <h3 className="myClass"><input type="date">Date: </input></h3> */}
           <h5>*hours and dates may vary from day to day</h5>
