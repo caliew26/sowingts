@@ -2,7 +2,7 @@ const express = require("express");
 const mysql = require("mysql2")
 const routes = require("./routes");
 const app = express();
-const PORT = process.env.PORT || 3001;
+// const PORT = process.env.PORT || 3001;
 const db = require("./models");
 require('dotenv').config();
 
@@ -22,7 +22,7 @@ app.use(routes);
 db.sequelize.sync().then(function(){
   // console.log(process.env.GOOGLE_KEY + " HELLLLOOOOOO") 
   global.GOOGLE_KEY=process.env.GOOGLE_KEY
-  app.listen(PORT, function(){
+  app.listen(process.env.PORT || 3001, function(){
     console.log("App listening on PORT " + PORT);
   });
 });
